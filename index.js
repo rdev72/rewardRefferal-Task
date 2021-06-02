@@ -27,5 +27,5 @@ app.get('/',(req,res)=>{res.send(`<h1>This is rewardRefferal Task website</h1>`)
 app.use('/main',require('./routes/main'))
 
 
-const port = 3000
+const port = process.env.PORT || 3000
 app.listen(port,console.log(`server is running at port: ${port}`))
