@@ -1,0 +1,293 @@
+{
+	"info": {
+		"_postman_id": "5a671a20-7ffc-4bf1-bfa3-d7ba580ffc09",
+		"name": "reward-Refferal-Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"user4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{rewardRefferal}}/main?userId=60b6d515714e03d563cf01c4",
+					"host": [
+						"{{rewardRefferal}}"
+					],
+					"path": [
+						"main"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "60b6d515714e03d563cf01c4"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "user1",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"user1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/main",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"main"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "60b6bc01548872c49cf806bd",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "154"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9a-g1J9niTlIqZB0VrGEN1x0hnOIzc\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Jun 2021 23:07:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"_id\": \"60b6bd9d3705a6c4d624ab83\",\n        \"name\": \"user1\",\n        \"__v\": 0\n    },\n    \"wallet\": {\n        \"_id\": \"60b6bd9d3705a6c4d624ab84\",\n        \"userId\": \"60b6bd9d3705a6c4d624ab83\",\n        \"__v\": 0\n    }\n}"
+				},
+				{
+					"name": "user2",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"user2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/main?userId=60b6bd9d3705a6c4d624ab83",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"main"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "60b6bd9d3705a6c4d624ab83"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "192"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c0-a9/6nHocqNfMWQUZetNMVWGtq0A\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Jun 2021 23:07:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"_id\": \"60b6bdca3705a6c4d624ab85\",\n        \"name\": \"user2\",\n        \"paren1Id\": \"60b6bd9d3705a6c4d624ab83\",\n        \"__v\": 0\n    },\n    \"wallet\": {\n        \"_id\": \"60b6bdca3705a6c4d624ab86\",\n        \"userId\": \"60b6bdca3705a6c4d624ab85\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "money Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"60b6d53c714e03d563cf01c6\",\n    \"money\": 10\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{rewardRefferal}}/main/addMoney",
+					"host": [
+						"{{rewardRefferal}}"
+					],
+					"path": [
+						"main",
+						"addMoney"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "money Add",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"60b6d53c714e03d563cf01c6\",\n    \"money\": 10\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/main/addMoney",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"main",
+								"addMoney"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "101"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"65-Q5B6JODUbLZOdM7GYLnQIRpKYDY\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 02 Jun 2021 00:55:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"60b6d53c714e03d563cf01c7\",\n    \"amount\": 10,\n    \"userId\": \"60b6d53c714e03d563cf01c6\",\n    \"userName\": \"user4\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "rewardRefferal",
+			"value": "https://rewardrefferal-task.herokuapp.com"
+		}
+	]
+}
